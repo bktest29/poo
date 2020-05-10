@@ -36,6 +36,19 @@ function initializeApp(data) {
             window.alert("ไม่สามารถส่งได้: " + error);
         });
     });
+    
+    // sendMessages call
+    document.getElementById('sen01').addEventListener('click', function () {
+        liff.sendMessages([{
+            type: 'text',
+            text: "ยิงเพื่อน2"
+        
+        }]).then(function () {
+            liff.closeWindow();
+        }).catch(function (error) {
+            window.alert("ไม่สามารถส่งได้: " + error);
+        });
+    });
 
     // sendMessages call
     document.getElementById('sendmessagebutton2').addEventListener('click', function () {
